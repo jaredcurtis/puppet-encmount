@@ -39,7 +39,7 @@ define encmount::mount(
     refreshonly => true,
     subscribe   => Exec['create key'],
     notify      => [ Exec['delete key'], Mount[$mount] ],
-    require     => Class['cryptsetup'],
+    require     => Class['encmount'],
   }
 
   mount { $mount:
