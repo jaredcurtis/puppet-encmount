@@ -8,7 +8,6 @@ define encmount::mount(
   $options='defaults',
   $temp="/dev/shm/${mapper}"
 ) {
-  include cryptsetup
   $devmapper = "/dev/mapper/${mapper}"
 
   file { $temp:
