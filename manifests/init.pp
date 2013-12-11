@@ -27,5 +27,7 @@
 #   key    => '1234!@#$',
 # }
 class encmount {
-  include cryptsetup
+  pacakge { 'cryptsetup':
+    ensure => installed,
+  }
 }
